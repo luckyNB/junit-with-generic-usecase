@@ -34,4 +34,5 @@ public class JunitGenericsTestCases {
         MaxNumberFinder maxNumberFinder = new MaxNumberFinder(10, 20, 30);
         Assert.assertEquals(Integer.valueOf(30), maxNumberFinder.testMaximum());
     }
+
 }

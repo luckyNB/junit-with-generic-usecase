@@ -1,15 +1,15 @@
 package com.bridgelabz;
 
 public class MaxNumberFinder<X> {
-  private   X y;
-   private X z;
-    private  X x;
+    private X y;
+    private X z;
+    private X x;
 
-    public  MaxNumberFinder(X x, X y, X z) {
+    public MaxNumberFinder(X x, X y, X z) {
         this.x = x;
         this.y = y;
         this.z = z;
-}
+    }
 
     public static Integer findingMaxNumber(Integer num1, Integer num2, Integer num3) {
         Integer max = num1;
@@ -55,11 +55,7 @@ public class MaxNumberFinder<X> {
         return max;
     }
 
-    public  <X> X testMaximum(){
-        return (X) testMaximum(x,y,z);
-    }
-
-    public static <X> X testMaximum(X x,X y,X z) {
+    public static <X> X testMaximum(X x, X y, X z) {
         X max = x;
         if (x.hashCode() > y.hashCode() && x.hashCode() > z.hashCode()) {
             max = x;
@@ -69,5 +65,16 @@ public class MaxNumberFinder<X> {
             max = z;
         return max;
 
+    }
+
+    public static <X> void printMaxNumber(X maxNumberToBePrinted) {
+        System.out.println("Maximum number among three number:" + maxNumberToBePrinted);
+    }
+
+    public <X> X testMaximum() {
+
+        X maxNumber = (X) testMaximum(x, y, z);
+        printMaxNumber(maxNumber);
+        return maxNumber;
     }
 }
