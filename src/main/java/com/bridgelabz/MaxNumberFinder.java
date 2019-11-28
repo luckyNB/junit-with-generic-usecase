@@ -1,6 +1,16 @@
 package com.bridgelabz;
 
 public class MaxNumberFinder<X> {
+  private   X y;
+   private X z;
+    private  X x;
+
+    public  MaxNumberFinder(X x, X y, X z) {
+        this.x = x;
+        this.y = y;
+        this.z = z;
+}
+
     public static Integer findingMaxNumber(Integer num1, Integer num2, Integer num3) {
         Integer max = num1;
         if (num2.compareTo(max) > 0) {
@@ -40,9 +50,24 @@ public class MaxNumberFinder<X> {
             max = a1;
         } else if (a2.hashCode() > a1.hashCode() && a2.hashCode() > a3.hashCode()) {
             max = a2;
-        }
-        else
-            max=a3;
+        } else
+            max = a3;
         return max;
+    }
+
+    public  <X> X testMaximum(){
+        return (X) testMaximum(x,y,z);
+    }
+
+    public static <X> X testMaximum(X x,X y,X z) {
+        X max = x;
+        if (x.hashCode() > y.hashCode() && x.hashCode() > z.hashCode()) {
+            max = x;
+        } else if (y.hashCode() > x.hashCode() && y.hashCode() > z.hashCode()) {
+            max = y;
+        } else
+            max = z;
+        return max;
+
     }
 }
