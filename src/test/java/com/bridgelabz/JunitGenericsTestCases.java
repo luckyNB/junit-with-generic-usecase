@@ -22,4 +22,10 @@ public class JunitGenericsTestCases {
         String maxString=MaxNumberFinder.findingMaxNumber("Laxman","Narayan","Bhosale");
         Assert.assertEquals("Narayan",maxString);
     }
+
+    @Test
+    public void givenThreeValues_Should_ReturnMaxAmongThem() {
+        String maxString=MaxNumberFinder.findingMaxGenerics("L","Z","M");
+        Assert.assertEquals("Z",maxString);
+    }
 }
