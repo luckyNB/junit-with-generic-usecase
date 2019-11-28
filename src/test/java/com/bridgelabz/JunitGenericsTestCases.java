@@ -16,4 +16,10 @@ public class JunitGenericsTestCases {
         Float maxNumber=MaxNumberFinder.findingMaxNumber(10.2f,45.3f,8.4f);
         Assert.assertEquals(Float.valueOf(45.3f),maxNumber);
     }
+
+    @Test
+    public void givenThreeString_Should_ReturnMaxAmoungThem() {
+        String maxString=MaxNumberFinder.findingMaxNumber("Laxman","Narayan","Bhosale");
+        Assert.assertEquals("Narayan",maxString);
+    }
 }
