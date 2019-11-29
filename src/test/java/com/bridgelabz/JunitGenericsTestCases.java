@@ -45,5 +45,10 @@ public class JunitGenericsTestCases {
         Integer maxNumber=MaxNumberFinder.findingMaxNumber(40,50,30);
         Assert.assertEquals(Integer.valueOf(50),maxNumber);
     }
+    @Test
+    public void givenMaxNumberAt_3rdPosition_Should_Return_SameNumber() {
+        Integer maxNumber=MaxNumberFinder.findingMaxNumber(40,30,50);
+        Assert.assertEquals(Integer.valueOf(50),maxNumber);
+    }
 
 }
